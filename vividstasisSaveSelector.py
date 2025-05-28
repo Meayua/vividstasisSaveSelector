@@ -85,7 +85,7 @@ def intro():
 
 
 def swapsave():
-    vssavelocation = f"C:\\Users\\{user}\\Appdata\\Local\\VIVIDSTASIS"
+    vssavelocation = f"C:/Users/{user}/Appdata/Local/VIVIDSTASIS"
 
     print("Which save?")
     print("1.")
@@ -97,25 +97,25 @@ def swapsave():
     choice = input("")
     if choice == "1":
         src = (
-            f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\Save{choice}"
+            f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
         )
         shutil.rmtree(vssavelocation)
         shutil.copytree(src, vssavelocation)
     elif choice == "2":
         src = (
-            f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\Save{choice}"
+            f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
         )
         shutil.rmtree(vssavelocation)
         shutil.copytree(src, vssavelocation)
     elif choice == "3":
         src = (
-            f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\Save{choice}"
+            f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
         )
         shutil.rmtree(vssavelocation)
         shutil.copytree(src, vssavelocation)
     elif choice == "4":
         src = (
-            f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\Save{choice}"
+            f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
         )
         shutil.rmtree(vssavelocation)
         shutil.copytree(src, vssavelocation)
@@ -136,7 +136,7 @@ def swapsave():
 
 
 def overwrite():
-    vssavelocation = f"C:\\Users\\{user}\\Appdata\\Local\\VIVIDSTASIS"
+    vssavelocation = f"C:/Users/{user}/Appdata/Local/VIVIDSTASIS"
     os.system("cls")
 
     print("Which save do you want to write to?")
@@ -149,25 +149,25 @@ def overwrite():
     choice = input("")
     if choice == "1":
         src = (
-            f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\Save{choice}"
+            f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
         )
         shutil.rmtree(src)
         shutil.copytree(vssavelocation, src)
     elif choice == "2":
         src = (
-            f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\Save{choice}"
+            f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
         )
         shutil.rmtree(src)
         shutil.copytree(vssavelocation, src)
     elif choice == "3":
         src = (
-            f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\Save{choice}"
+            f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
         )
         shutil.rmtree(src)
         shutil.copytree(vssavelocation, src)
     elif choice == "1":
         src = (
-            f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\Save{choice}"
+            f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
         )
         shutil.rmtree(src)
         shutil.copytree(vssavelocation, src)
@@ -196,25 +196,25 @@ def erase():
     choice = input("")
     if choice == "1":
         src = (
-            f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\Save{choice}"
+            f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
         )
         shutil.rmtree(src)
         os.makedirs(src)
     elif choice == "2":
         src = (
-            f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\Save{choice}"
+            f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
         )
         shutil.rmtree(src)
         os.makedirs(src)
     elif choice == "3":
         src = (
-            f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\Save{choice}"
+            f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
         )
         shutil.rmtree(src)
         os.makedirs(src)
     elif choice == "4":
         src = (
-            f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\Save{choice}"
+            f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
         )
         shutil.rmtree(src)
         os.makedirs(src)
