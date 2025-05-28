@@ -178,19 +178,19 @@ def erase():
     print("4.")
     print("Press Q to go back to main menu.")
     choice = input("")
-    if choice == 1:
+    if choice == "1":
         src = f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\Save{choice}"
         os.system(f"rmdir {src} /q /s")
         os.mkdir(src)
-    elif choice == 2:
+    elif choice == "2":
         src = f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\Save{choice}"
         os.system(f"rmdir {src} /q /s")
         os.mkdir(src)
-    elif choice == 3:
+    elif choice == "3":
         src = f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\Save{choice}"
         os.system(f"rmdir {src} /q /s")
         os.mkdir(src)
-    elif choice == 4:
+    elif choice == "4":
         src = f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\Save{choice}"
         os.system(f"rmdir {src} /q /s")
         os.mkdir(src)
