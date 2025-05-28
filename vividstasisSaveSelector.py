@@ -44,8 +44,10 @@ def menu(option):
         os.system("cls")
         swapsave()
     elif option == "2":
+        os.system("cls")
         overwrite()
     elif option == "3":
+        os.system("cls")
         erase()
     elif option == "4":
         os.system("cls")
@@ -169,6 +171,7 @@ def overwrite():
         os.system("cls")
         print("That's not a valid choice.")
         overwrite()
+    intro()
 
 def erase():
     print("Which save do you want to erase?")
@@ -182,18 +185,22 @@ def erase():
         src = f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\Save{choice}"
         os.system(f"rmdir {src} /q /s")
         os.mkdir(src)
+        getpass.getpass("Done! Press Enter to go back to menu! \n")
     elif choice == "2":
         src = f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\Save{choice}"
         os.system(f"rmdir {src} /q /s")
         os.mkdir(src)
+        getpass.getpass("Done! Press Enter to go back to menu! \n")
     elif choice == "3":
         src = f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\Save{choice}"
         os.system(f"rmdir {src} /q /s")
         os.mkdir(src)
+        getpass.getpass("Done! Press Enter to go back to menu! \n")
     elif choice == "4":
         src = f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\Save{choice}"
         os.system(f"rmdir {src} /q /s")
         os.mkdir(src)
+        getpass.getpass("Done! Press Enter to go back to menu! \n")
     elif choice == "Q":
         intro()
     elif choice == "q":
@@ -202,6 +209,7 @@ def erase():
         os.system("cls")
         print("That's not a valid choice.")
         erase()
+    intro()
 intro()
 
 
