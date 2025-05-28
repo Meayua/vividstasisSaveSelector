@@ -1,5 +1,6 @@
 import os
 import getpass
+import shutil
 
 def is_app_running(app_name):
     try:
@@ -79,36 +80,32 @@ def swapsave():
     choice = input("")
     if choice == "1":
         src = f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\Save{choice}"
-        os.system(f"rmdir {vssavelocation} /s /q")
-        os.mkdir(vssavelocation)
-        os.system(f"xcopy /s /q {src}\\* {vssavelocation}")
+        shutil.rmtree(vssavelocation)
+        shutil.copytree(src, vssavelocation)
         print("Done! Press enter to go back to menu!")
         getpass.getpass("")
         os.system("cls")
         pass
     elif choice == "2":
         src = f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\Save{choice}"
-        os.system(f"rmdir {vssavelocation} /s /q")
-        os.mkdir(vssavelocation)
-        os.system(f"xcopy /s /q {src}\\* {vssavelocation}")
+        shutil.rmtree(vssavelocation)
+        shutil.copytree(src, vssavelocation)
         print("Done! Press enter to go back to menu!")
         getpass.getpass("")
         os.system("cls")
         pass
     elif choice == "3":
         src = f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\Save{choice}"
-        os.system(f"rmdir {vssavelocation} /s /q")
-        os.mkdir(vssavelocation)
-        os.system(f"xcopy /s /q {src}\\* {vssavelocation}")
+        shutil.rmtree(vssavelocation)
+        shutil.copytree(src, vssavelocation)
         print("Done! Press enter to go back to menu!")
         getpass.getpass("")
         os.system("cls")
         pass
     elif choice == "4":
         src = f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\Save{choice}"
-        os.system(f"rmdir {vssavelocation} /s /q")
-        os.mkdir(vssavelocation)
-        os.system(f"xcopy /s /q {src}\\* {vssavelocation}")
+        shutil.rmtree(vssavelocation)
+        shutil.copytree(src, vssavelocation)
         print("Done! Press enter to go back to menu!")
         getpass.getpass("")
         os.system("cls")
@@ -126,7 +123,7 @@ def swapsave():
 
 
 def overwrite():
-    vssavelocation = f"C:\\Users\\{user}\\Appdata\\Local\\VIVIDSTASIS"
+    vssavelocation = f"C:/Users/{user}/Appdata/Local/VIVIDSTASIS"
     os.system("cls")
     print("Which save do you want to write to?")
     print("1.")
@@ -136,31 +133,27 @@ def overwrite():
     print("Press Q to go back to main menu.")
     choice = input("")
     if choice == "1":
-        src = f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\Save{choice}"
-        os.system(f"rmdir {src} /s /q")
-        os.mkdir(src)
-        os.system(f"xcopy /s /q {vssavelocation} {src}")
+        src = f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
+        shutil.rmtree(src)
+        shutil.copytree(vssavelocation, src)
         getpass.getpass("Done! Press Enter to go back to menu! \n")
         pass
     elif choice == "2":
-        src = f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\Save{choice}"
-        os.system(f"rmdir {src} /s /q")
-        os.mkdir(src)
-        os.system(f"xcopy /s /q {vssavelocation} {src}")
+        src = f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
+        shutil.rmtree(src)
+        shutil.copytree(vssavelocation, src)
         getpass.getpass("Done! Press Enter to go back to menu! \n")
         pass
     elif choice == "3":
-        src = f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\Save{choice}"
-        os.system(f"rmdir {src} /s /q")
-        os.mkdir(src)
-        os.system(f"xcopy /s /q {vssavelocation} {src}")
+        src = f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
+        shutil.rmtree(src)
+        shutil.copytree(vssavelocation, src)
         getpass.getpass("Done! Press Enter to go back to menu! \n")
         pass
-    elif choice == "4":
-        src = f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\Save{choice}"
-        os.system(f"rmdir {src} /s /q")
-        os.mkdir(src)
-        os.system(f"xcopy /s /q {vssavelocation} {src}")
+    elif choice == "1":
+        src = f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
+        shutil.rmtree(src)
+        shutil.copytree(vssavelocation, src)
         getpass.getpass("Done! Press Enter to go back to menu! \n")
         pass
     elif choice == "Q":
@@ -182,24 +175,24 @@ def erase():
     print("Press Q to go back to main menu.")
     choice = input("")
     if choice == "1":
-        src = f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\Save{choice}"
-        os.system(f"rmdir {src} /q /s")
-        os.mkdir(src)
+        src = f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
+        shutil.rmtree(src)
+        os.makedirs(src)
         getpass.getpass("Done! Press Enter to go back to menu! \n")
     elif choice == "2":
-        src = f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\Save{choice}"
-        os.system(f"rmdir {src} /q /s")
-        os.mkdir(src)
+        src = f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
+        shutil.rmtree(src)
+        os.makedirs(src)
         getpass.getpass("Done! Press Enter to go back to menu! \n")
     elif choice == "3":
-        src = f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\Save{choice}"
-        os.system(f"rmdir {src} /q /s")
-        os.mkdir(src)
+        src = f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
+        shutil.rmtree(src)
+        os.makedirs(src)
         getpass.getpass("Done! Press Enter to go back to menu! \n")
     elif choice == "4":
-        src = f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\Save{choice}"
-        os.system(f"rmdir {src} /q /s")
-        os.mkdir(src)
+        src = f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
+        shutil.rmtree(src)
+        os.makedirs(src)
         getpass.getpass("Done! Press Enter to go back to menu! \n")
     elif choice == "Q":
         intro()
