@@ -2,8 +2,7 @@
 What is this? A save selector? ...oh wait that pun makes no sense...
 
 # Requirements
-v/s 
-Python
+v/s & Python
 
 # Usage
 Literally just run the .exe from the releases tab.
