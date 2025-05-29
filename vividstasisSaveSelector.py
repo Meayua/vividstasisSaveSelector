@@ -31,7 +31,12 @@ try:
     path = f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector"
     os.mkdir(path)
 
-    path = f"{path}\\Save1"
+    path = f"C:\\Users\\{user}\\Appdata\\Local\\vividstasisSaveSelector\\names.txt"
+    with open(path, "a") as name:
+        name.writelines(" , , , ")
+        pass
+
+    path = f"{path}\\..\\Save1"
     os.mkdir(path)
 
     path = f"{path}\\..\\Save2"
@@ -65,6 +70,8 @@ def menu(option):
     elif option == "3":
         erase()
     elif option == "4":
+        name()
+    elif option == "5":
         print("Exiting...")
         exit(0)
     else:
@@ -79,7 +86,8 @@ def intro():
     print("1. Set save")
     print("2. Write to a save")
     print("3. Wipe a save")
-    print("4. Exit")
+    print("4. Rename a save")
+    print("5. Exit")
 
     menu(input("What do you want to do?\n"))
 
@@ -163,12 +171,49 @@ def erase():
             )
             shutil.rmtree(src)
             os.makedirs(src)
-            
+
         getpass.getpass("Done! Press Enter to go back to menu! \n")
         intro()
     except ValueError:
         os.system("cls")
         print("That's not a valid option.")
         erase()
+
+def name():
+    path = f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/names.txt"
+    print("Which save do you want to rename?")
+    print("1.")
+    print("2.")
+    print("3.")
+    print("4.")
+    print("Press Q to go back to main menu.")
+    
+    choice = input()
+    try:
+        if choice == "Q" or choice == "q":
+            intro()
+        elif int(choice) in range(1,5):
+            name = str(input("What do you want to name it? \n"))
+            file = open(path,"w")
+        
+            current = file.read()
+            filec = ""
+            which = 1
+            for elem in current:
+                if elem == ",":
+                    which += 1
+                    filec += ","
+                elif which == choice:
+                    filec += name
+                else:
+                    filec += elem
+            # broken function rn pls retrun later :despair:
+
+        getpass.getpass("Done! Press Enter to go back to menu! \n")
+        intro()
+    except ValueError:
+        os.system("cls")
+        print("That's not a valid option.")
+        name()
 
 intro()
