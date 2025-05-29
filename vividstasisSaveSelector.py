@@ -65,7 +65,7 @@ def menu(option):
     elif option == "3":
         erase()
     elif option == "4":
-        exit("Exiting...")
+        print("Exiting...")
         exit(0)
     else:
         print("That's not a valid option.")
@@ -95,44 +95,24 @@ def swapsave():
     print("Press Q to go back to main menu.")
 
     choice = input("")
-    if choice == "1":
-        src = (
-            f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
-        )
-        shutil.rmtree(vssavelocation)
-        shutil.copytree(src, vssavelocation)
-    elif choice == "2":
-        src = (
-            f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
-        )
-        shutil.rmtree(vssavelocation)
-        shutil.copytree(src, vssavelocation)
-    elif choice == "3":
-        src = (
-            f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
-        )
-        shutil.rmtree(vssavelocation)
-        shutil.copytree(src, vssavelocation)
-    elif choice == "4":
-        src = (
-            f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
-        )
-        shutil.rmtree(vssavelocation)
-        shutil.copytree(src, vssavelocation)
-    elif choice == "Q":
+    try:
+        if choice == "Q" or choice == "q":
+            intro()
+        elif int(choice) in range(1,5):
+
+            src = (
+                f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
+            )
+            shutil.rmtree(vssavelocation)
+            shutil.copytree(src, vssavelocation)
+        print("Done! Press enter to go back to menu!")
+        getpass.getpass("")
+
         intro()
-    elif choice == "q":
-        intro()
-    else:
+    except ValueError:
         os.system("cls")
-        print("That's not a valid choice.")
-
+        print("That's not a valid option.")
         swapsave()
-
-    print("Done! Press enter to go back to menu!")
-    getpass.getpass("")
-
-    intro()
 
 
 def overwrite():
@@ -147,42 +127,22 @@ def overwrite():
     print("Press Q to go back to main menu.")
 
     choice = input("")
-    if choice == "1":
-        src = (
-            f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
-        )
-        shutil.rmtree(src)
-        shutil.copytree(vssavelocation, src)
-    elif choice == "2":
-        src = (
-            f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
-        )
-        shutil.rmtree(src)
-        shutil.copytree(vssavelocation, src)
-    elif choice == "3":
-        src = (
-            f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
-        )
-        shutil.rmtree(src)
-        shutil.copytree(vssavelocation, src)
-    elif choice == "1":
-        src = (
-            f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
-        )
-        shutil.rmtree(src)
-        shutil.copytree(vssavelocation, src)
-    elif choice == "Q":
+    try:
+        if choice == "Q" or choice == "q":
+            intro()
+        elif int(choice) in range(1,5):
+            src = (
+                f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
+            )
+            shutil.rmtree(src)
+            shutil.copytree(vssavelocation, src)
+
+        getpass.getpass("Done! Press Enter to go back to menu! \n")
         intro()
-    elif choice == "q":
-        intro()
-    else:
+    except ValueError:
         os.system("cls")
-        print("That's not a valid choice.")
-
+        print("That's not a valid option.")
         overwrite()
-
-    getpass.getpass("Done! Press Enter to go back to menu! \n")
-    intro()
 
 
 def erase():
@@ -194,42 +154,21 @@ def erase():
     print("Press Q to go back to main menu.")
 
     choice = input("")
-    if choice == "1":
-        src = (
-            f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
-        )
-        shutil.rmtree(src)
-        os.makedirs(src)
-    elif choice == "2":
-        src = (
-            f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
-        )
-        shutil.rmtree(src)
-        os.makedirs(src)
-    elif choice == "3":
-        src = (
-            f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
-        )
-        shutil.rmtree(src)
-        os.makedirs(src)
-    elif choice == "4":
-        src = (
-            f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
-        )
-        shutil.rmtree(src)
-        os.makedirs(src)
-    elif choice == "Q":
+    try:
+        if choice == "Q" or choice == "q":
+            intro()
+        elif int(choice) in range(1,5):
+            src = (
+                f"C:/Users/{user}/Appdata/Local/vividstasisSaveSelector/Save{choice}"
+            )
+            shutil.rmtree(src)
+            os.makedirs(src)
+            
+        getpass.getpass("Done! Press Enter to go back to menu! \n")
         intro()
-    elif choice == "q":
-        intro()
-    else:
+    except ValueError:
         os.system("cls")
-        print("That's not a valid choice.")
-
+        print("That's not a valid option.")
         erase()
-
-    getpass.getpass("Done! Press Enter to go back to menu! \n")
-    intro()
-
 
 intro()
